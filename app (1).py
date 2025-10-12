@@ -8,9 +8,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import *
 
 
-dt = pickle.load(open('dt_cfs.pkl','rb'))
-lr = pickle.load(open('lr_cfs.pkl','rb'))
-rf = pickle.load(open('rf_cfs.pkl','rb'))
+dt = pickle.load(open('dt.pkl','rb'))
+lr = pickle.load(open('lr.pkl','rb'))
+rf = pickle.load(open('rf.pkl','rb'))
 
 c1,c2 = st.columns([2,7])
 
@@ -191,6 +191,7 @@ prob_df = pd.DataFrame({
 
 st.write(prob_df)
 st.bar_chart(prob_df.set_index('Categories'))
+
 
 
 
